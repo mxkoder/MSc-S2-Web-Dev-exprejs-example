@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display All Students Page</title>
+
+    <!-- should be in a seperate css file -->
+    <style>
+        ul {list-style: none; padding-left: 0;}
+    </style>
+</head>
+<body>
+    <ul id="students-ul">
+        <% students.forEach((student) => { %>
+            <li><%=student.Name %>
+                &nbsp;<%=student.Age %>
+                &nbsp;<%=student.Course %>
+                &nbsp;<a href="" data-id="<%=student.Id %>"> View More</a>
+            </li>
+        <% }); %>
+    </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/js/displayallstudents.js"></script>
+    
+</body>
+</html>
